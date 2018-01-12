@@ -6,7 +6,7 @@
    - name: Update all packages to latest
      yum:
         upgrade: "yes"
-   - name: Start a container with a command
+   - name: Start mongo container
     docker_container:
         name: mongo
         image: test/mongo:3.4
