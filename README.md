@@ -74,8 +74,6 @@ $ rs.initiate( {
 
 ### Improvements
 Since this was a demonstration, there are multiple areas of improvement
-* Register EC2 instances in an ASG with a load balancer
-    * DNS records update dynamically if multiple nodes are created/destroyed
 * Store the terraform state file in an S3 bucket
 * Automatic clustering of mongo nodes
 * container orchestration for deployments
