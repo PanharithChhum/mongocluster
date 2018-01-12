@@ -63,11 +63,11 @@ Note: You may have to use the IP address if the DNS record is not live yet.
 $ docker exec -it mongo bash
 $ mongo
 $ rs.initiate( {
-   _id : "rs0",
+   _id : "rs",
    members: [               
-      { _id: 0, host: "mongo-cluster-0.test.com:27017" }, 
-      { _id: 1, host: "mongo-cluster-1.test.com:27017" },
-      { _id: 2, host: "mongo-cluster-2.test.com:27017" }
+      { _id: 0, host: "mongo-0.test.com:27017" }, 
+      { _id: 1, host: "mongo-1.test.com:27017" },
+      { _id: 2, host: "mongo-2.test.com:27017" }
    ]
 })
 ```
