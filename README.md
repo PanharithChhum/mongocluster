@@ -1,4 +1,4 @@
-# Proof of concept Infrastructure as Code - Node Mongo Cluster
+# Proof of concept Infrastructure as Code - Mongo Cluster
 
 ### Summary
 Demonstration of a mongo cluster using terraform, ansible, and docker
