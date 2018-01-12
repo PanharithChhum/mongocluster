@@ -1,0 +1,20 @@
+---
+ - hosts: tag_ansibleGroup_mongoCluster
+   user: centos
+   become: true
+   tasks:
+   - name: Update all packages to latest
+     yum:
+        upgrade: "yes"
+   - name: Start a container with a command
+    docker_container:
+        name: mongo
+        image: test/mongo:3.4
+        ports: 
+        - "27017:27017"
+        volumes:
+        - /data/db:/data/db
+        env:
+            MONGO_DATA_DIR: "/data/db"
+            MONGO_LOG_DIR: "/data/logs"
+    command: ["mongod", "--replSet", "rs", "--smallfiles", "--logpath=/data/logs"]
